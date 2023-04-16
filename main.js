@@ -24,6 +24,8 @@ function gotRESULT(error,results){
 if (error){
 console.log(error);
 }else{
-console.log(results)    
+console.log(results);
+document.getElementById("resultado_nombre").innerHTML=results[0].label;
+document.getElementById("resultado_porcentaje").innerHTML=results[0].confidence.toFixed(3);
 }
 }
